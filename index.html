@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Barby — Applied Informatics graduate exploring web development, visual design and creative technology."
+    >
+
+    <title>barby. — Web & Creative Technology</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            document.documentElement.setAttribute(
+                "data-theme",
+                savedTheme
+            );
+        } else if (
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+        ) {
+            document.documentElement.setAttribute(
+                "data-theme",
+                "dark"
+            );
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="site-header">
+
+        <a class="logo" href="#home">
+            barby<span>.</span>
+        </a>
+
+
+        <nav
+            class="navigation"
+            id="navigation"
+            aria-label="Main navigation"
+        >
+
+            <a href="#about">about</a>
+            <a href="#projects">projects</a>
+            <a href="#exploring">exploring</a>
+            <a href="#interests">interests</a>
+            <a href="#contact">contact</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button
+                class="theme-toggle"
+                id="theme-toggle"
+                type="button"
+                aria-label="Toggle dark mode"
+            >
+                <span
+                    class="theme-icon"
+                    id="theme-icon"
+                >☾</span>
+            </button>
+
+
+            <button
+                class="menu-button"
+                id="menu-button"
+                type="button"
+                aria-label="Open navigation"
+                aria-expanded="false"
+            >
+
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- HERO -->
+
+        <section
+            class="hero section"
+            id="home"
+        >
+
+            <div class="hero-content reveal">
+
+                <p class="eyebrow">
+                    APPLIED INFORMATICS · WEB · CREATIVE TECH
+                </p>
+
+
+                <h1>
+                    Hi, I'm <em>Barby.</em>
+                </h1>
+
+
+                <p class="hero-description">
+                    Applied Informatics graduate exploring
+                    web development, visual design and
+                    creative technology.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        class="button"
+                        href="#projects"
+                    >
+                        Explore my work
+                        <span>↓</span>
+                    </a>
+
+
+                    <a
+                        class="text-link"
+                        href="#about"
+                    >
+                        A little about me
+                        <span>↘</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="hero-decoration"
+                aria-hidden="true"
+            >
+
+                <div class="decoration-circle circle-one"></div>
+
+                <div class="decoration-circle circle-two"></div>
+
+                <div class="decoration-orbit"></div>
+
+
+                <span class="decoration-word word-one">
+                    create
+                </span>
+
+                <span class="decoration-word word-two">
+                    learn
+                </span>
+
+                <span class="decoration-word word-three">
+                    explore
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ABOUT -->
+
+        <section
+            class="section about"
+            id="about"
+        >
+
+            <div class="section-title reveal">
+
+                <p class="eyebrow">
+                    01 / ABOUT
+                </p>
+
+
+                <h2>
+                    A little bit<br>
+                    <em>about me.</em>
+                </h2>
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text reveal">
+
+                    <h3>
+                        It started with a computer.
+                    </h3>
+
+
+                    <p>
+                        I was still in kindergarten when I first
+                        watched my brother play Diablo. I didn't
+                        really understand what the game was about —
+                        I just knew I wanted to play too.
+                    </p>
+
+
+                    <p>
+                        Over the years, I spent countless hours
+                        with The Sims and always found my way back
+                        to the Diablo franchise. My interest in
+                        computers never really disappeared.
+                    </p>
+
+
+                    <p>
+                        I eventually studied
+                        <strong>Applied Informatics</strong>
+                        at university, where I completed my
+                        Master's degree.
+                    </p>
+
+
+                    <p>
+                        Today I'm focusing on web development,
+                        visual design and creative digital projects
+                        while continuously learning and experimenting.
+                    </p>
+
+                </div>
+
+
+
+                <div class="education-card reveal">
+
+                    <span class="card-number">
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <p class="card-label">
+                            EDUCATION
+                        </p>
+
+
+                        <h3>
+                            Applied<br>
+                            Informatics
+                        </h3>
+
+
+                        <p>
+                            Master's degree
+                        </p>
+
+                    </div>
+
+
+                    <span class="card-symbol">
+                        ✦
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJECTS -->
+
+        <section
+            class="section projects"
+            id="projects"
+        >
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <p class="eyebrow">
+                        02 / PROJECTS
+                    </p>
+
+
+                    <h2>
+                        Things I've<br>
+                        <em>built.</em>
+                    </h2>
+
+                </div>
+
+
+                <p class="section-intro">
+                    Two collections of small projects where
+                    I'm practicing, experimenting and
+                    developing my skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="project-list">
+
+
+                <!-- HTML & CSS REPOSITORY -->
+
+                <article class="project-card reveal">
+
+                    <div class="project-image html-project">
+
+                        <span class="project-symbol">
+                            &lt; / &gt;
+                        </span>
+
+
+                        <div class="code-lines">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="project-content">
+
+                        <div>
+
+                            <p class="project-number">
+                                01 / REPOSITORY
+                            </p>
+
+
+                            <h3>
+                                Frontend<br>
+                                Mini Projects
+                            </h3>
+
+
+                            <p class="project-description">
+                                A collection of small frontend
+                                projects built with HTML and CSS
+                                while practicing layout design,
+                                forms and UI components.
+                            </p>
+
+
+                            <div class="mini-projects">
+
+                                <p>
+                                    IN THIS REPOSITORY
+                                </p>
+
+
+                                <ul>
+
+                                    <li>
+                                        Greeting Card
+                                    </li>
+
+                                    <li>
+                                        School Appointment Form
+                                    </li>
+
+                                    <li>
+                                        Secret Message Document
+                                    </li>
+
+                                    <li>
+                                        Registration Form
+                                    </li>
+
+                                    <li>
+                                        Pricing Plans Layout
+                                    </li>
+
+                                    <li>
+                                        Playing Cards Layout
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="tags">
+
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>FLEXBOX</span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/barbycodes/html-css-mini-projects"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View repository ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- JAVASCRIPT REPOSITORY -->
+
+                <article class="project-card project-reverse reveal">
+
+                    <div class="project-image javascript-project">
+
+                        <span class="javascript-symbol">
+                            JS
+                        </span>
+
+
+                        <div class="javascript-circle"></div>
+
+                    </div>
+
+
+
+                    <div class="project-content">
+
+                        <div>
+
+                            <p class="project-number">
+                                02 / REPOSITORY
+                            </p>
+
+
+                            <h3>
+                                JavaScript<br>
+                                Mini Projects
+                            </h3>
+
+
+                            <p class="project-description">
+                                A collection of small JavaScript
+                                projects created to practice
+                                programming logic, string methods,
+                                calculations and interaction.
+                            </p>
+
+
+                            <div class="mini-projects">
+
+                                <p>
+                                    IN THIS REPOSITORY
+                                </p>
+
+
+                                <ul>
+
+                                    <li>
+                                        Confirm the Ending Tool
+                                    </li>
+
+                                    <li>
+                                        Truncate String Tool
+                                    </li>
+
+                                    <li>
+                                        Leap Year Calculator
+                                    </li>
+
+                                    <li>
+                                        Card Counting Assistant
+                                    </li>
+
+                                    <li>
+                                        Email Masker Tool
+                                    </li>
+
+                                    <li>
+                                        Calculator App
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+                            <div class="current-project">
+
+                                <span>CURRENTLY BUILDING</span>
+
+                                <strong>
+                                    Book Inventory App
+                                </strong>
+
+                                <small>
+                                    JavaScript project · in progress
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="project-footer">
+
+                            <div class="tags">
+
+                                <span>JAVASCRIPT</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+
+                            </div>
+
+
+                            <a
+                                href="https://github.com/barbycodes/js-mini-projects"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                View repository ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <p class="projects-note reveal">
+
+                Small projects today.
+                Bigger ideas tomorrow.
+
+                <span>✦</span>
+
+            </p>
+
+        </section>
+
+
+
+        <!-- EXPLORING -->
+
+        <section
+            class="exploring-section"
+            id="exploring"
+        >
+
+            <div class="section exploring">
+
+                <div class="section-heading reveal">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            03 / CURRENTLY
+                        </p>
+
+
+                        <h2>
+                            Always<br>
+                            <em>exploring.</em>
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-intro">
+                        I'm curious about many things and
+                        always looking for something new
+                        to learn.
+                    </p>
+
+                </div>
+
+
+
+                <div class="exploring-content">
+
+
+                    <div class="exploring-tags reveal">
+
+                        <span>JAVASCRIPT</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>WEB DESIGN</span>
+                        <span>VISUAL DESIGN</span>
+                        <span>GAME DESIGN</span>
+                        <span>CANVA</span>
+                        <span>ENGLISH</span>
+                        <span>SLOVAK</span>
+
+                    </div>
+
+
+
+                    <div class="exploring-text reveal">
+
+                        <p>
+                            I'm continuously developing my
+                            JavaScript skills and exploring the
+                            visual side of web development.
+                        </p>
+
+
+                        <p>
+                            I'm also interested in game design,
+                            especially interfaces, visual style,
+                            atmosphere and the creative side
+                            of games.
+                        </p>
+
+
+                        <p>
+                            Alongside technology, I'm working on
+                            my English and Slovak communication
+                            skills and collecting Canva certificates
+                            as I explore visual design.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INTERESTS -->
+
+        <section
+            class="section interests"
+            id="interests"
+        >
+
+            <div class="section-heading reveal">
+
+                <div>
+
+                    <p class="eyebrow">
+                        04 / INTERESTS
+                    </p>
+
+
+                    <h2>
+                        Beyond the<br>
+                        <em>screen.</em>
+                    </h2>
+
+                </div>
+
+
+                <p class="section-intro">
+                    Technology is a big part of what I enjoy,
+                    but definitely not the only one.
+                </p>
+
+            </div>
+
+
+
+            <div class="interest-grid">
+
+
+                <div class="interest-card reveal">
+
+                    <span>01</span>
+
+                    <div class="interest-icon">
+                        ◌
+                    </div>
+
+                    <h3>
+                        Reading
+                    </h3>
+
+                    <p>
+                        Getting lost in stories and discovering
+                        new worlds away from the screen.
+                    </p>
+
+                </div>
+
+
+
+                <div class="interest-card reveal">
+
+                    <span>02</span>
+
+                    <div class="interest-icon">
+                        ♨
+                    </div>
+
+                    <h3>
+                        Cooking
+                    </h3>
+
+                    <p>
+                        Trying new recipes and experimenting
+                        with different flavours.
+                    </p>
+
+                </div>
+
+
+
+                <div class="interest-card reveal">
+
+                    <span>03</span>
+
+                    <div class="interest-icon">
+                        ✦
+                    </div>
+
+                    <h3>
+                        Baking
+                    </h3>
+
+                    <p>
+                        One of those creative things where
+                        patience actually pays off.
+                    </p>
+
+                </div>
+
+
+
+                <div class="interest-card reveal">
+
+                    <span>04</span>
+
+                    <div class="interest-icon">
+                        ❋
+                    </div>
+
+                    <h3>
+                        Gardening
+                    </h3>
+
+                    <p>
+                        Growing things, taking care of plants
+                        and enjoying a slower kind of creativity.
+                    </p>
+
+                </div>
+
+
+
+                <div class="interest-card reveal">
+
+                    <span>05</span>
+
+                    <div class="interest-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Movement
+                    </h3>
+
+                    <p>
+                        I enjoy cardio workouts and long walks —
+                        a good way to stay active and clear my mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CONTACT -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="section contact">
+
+                <div class="contact-content reveal">
+
+                    <p class="eyebrow">
+                        05 / LET'S CONNECT
+                    </p>
+
+
+                    <h2>
+                        Let's make<br>
+                        <em>something.</em>
+                    </h2>
+
+
+                    <p class="contact-description">
+                        Have an idea? Want to collaborate?
+                        Want to teach me something?
+                        I'm always happy to connect, learn
+                        and share what I know.
+                    </p>
+
+
+                    <a
+                        class="contact-link"
+                        href="https://github.com/barbycodes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <span>
+                            Find me on GitHub
+                        </span>
+
+                        <span>
+                            ↗
+                        </span>
+
+                    </a>
+
+
+                    <div class="contact-tags">
+
+                        <span>
+                            OPEN TO COLLABORATION
+                        </span>
+
+                        <span>
+                            ALWAYS OPEN TO LEARNING
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <a
+            class="logo"
+            href="#home"
+        >
+            barby<span>.</span>
+        </a>
+
+
+        <p>
+            Built with curiosity & a little bit of code.
+        </p>
+
+
+        <a
+            href="https://github.com/barbycodes"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub ↗
+        </a>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
