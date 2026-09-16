@@ -741,6 +741,302 @@ h2 em {
 
 
 /* =========================================
+   PIXEL STUDIO VISUAL
+========================================= */
+
+.pixel-project {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--surface),
+            var(--surface-light)
+        );
+}
+
+.pixel-art {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 48px);
+
+    grid-template-rows:
+        repeat(4, 48px);
+
+    gap: 5px;
+
+    transform: rotate(-4deg);
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .pixel-art {
+    transform:
+        rotate(-2deg)
+        scale(1.05);
+}
+
+.pixel-art span {
+    display: block;
+
+    background: var(--background);
+
+    border: 1px solid var(--line);
+
+    transition:
+        background var(--transition);
+}
+
+.pixel-art span:nth-child(1),
+.pixel-art span:nth-child(6),
+.pixel-art span:nth-child(7),
+.pixel-art span:nth-child(10),
+.pixel-art span:nth-child(11),
+.pixel-art span:nth-child(16) {
+    background: var(--accent);
+}
+
+.pixel-art span:nth-child(2),
+.pixel-art span:nth-child(5),
+.pixel-art span:nth-child(8),
+.pixel-art span:nth-child(9),
+.pixel-art span:nth-child(12),
+.pixel-art span:nth-child(15) {
+    background: color-mix(
+        in srgb,
+        var(--accent) 35%,
+        var(--background)
+    );
+}
+
+.pixel-art span:nth-child(3),
+.pixel-art span:nth-child(4),
+.pixel-art span:nth-child(13),
+.pixel-art span:nth-child(14) {
+    background: var(--surface-light);
+}
+
+
+/* =========================================
+   TANK ARENA VISUAL
+========================================= */
+
+.tank-project {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            var(--surface-light),
+            var(--surface)
+        );
+}
+
+.tank-visual {
+    position: relative;
+
+    width: 220px;
+    height: 220px;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .tank-visual {
+    transform: scale(1.05);
+}
+
+.tank-body {
+    position: absolute;
+
+    left: 55px;
+    top: 82px;
+
+    width: 110px;
+    height: 75px;
+
+    background: var(--accent);
+
+    border: 4px solid var(--text);
+
+    border-radius: 8px;
+}
+
+.tank-body::before,
+.tank-body::after {
+    content: "";
+
+    position: absolute;
+
+    top: -4px;
+
+    width: 20px;
+    height: 75px;
+
+    background: var(--surface);
+
+    border: 4px solid var(--text);
+
+    border-radius: 4px;
+}
+
+.tank-body::before {
+    left: -30px;
+}
+
+.tank-body::after {
+    right: -30px;
+}
+
+.tank-barrel {
+    position: absolute;
+
+    left: 45px;
+    top: -55px;
+
+    width: 16px;
+    height: 58px;
+
+    background: var(--text);
+
+    border-radius: 4px;
+}
+
+
+/* =========================================
+   AUTUMN ADVENTURES VISUAL
+========================================= */
+
+.autumn-project {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            160deg,
+            var(--surface),
+            var(--surface-light)
+        );
+}
+
+.autumn-visual {
+    position: relative;
+
+    width: 280px;
+    height: 280px;
+
+    transition:
+        transform 0.5s ease;
+}
+
+.project-card:hover .autumn-visual {
+    transform: scale(1.04);
+}
+
+.autumn-sun {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    width: 62px;
+    height: 62px;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--accent);
+}
+
+.autumn-ground {
+    position: absolute;
+
+    left: 15px;
+    bottom: 35px;
+
+    width: 250px;
+    height: 45px;
+
+    border-top: 2px solid var(--text);
+
+    border-radius: 50%;
+}
+
+.autumn-tree {
+    position: absolute;
+
+    bottom: 70px;
+
+    width: 16px;
+
+    background: var(--text);
+
+    border-radius: 8px;
+}
+
+.autumn-tree::before {
+    content: "";
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--accent);
+}
+
+.tree-one {
+    left: 55px;
+
+    height: 105px;
+}
+
+.tree-one::before {
+    width: 82px;
+    height: 82px;
+
+    left: -33px;
+    top: -42px;
+}
+
+.tree-two {
+    left: 130px;
+
+    height: 135px;
+}
+
+.tree-two::before {
+    width: 95px;
+    height: 95px;
+
+    left: -40px;
+    top: -48px;
+}
+
+.tree-three {
+    left: 200px;
+
+    height: 90px;
+}
+
+.tree-three::before {
+    width: 72px;
+    height: 72px;
+
+    left: -28px;
+    top: -36px;
+}
+
+
+/* =========================================
    HTML PROJECT VISUAL
 ========================================= */
 
@@ -748,7 +1044,6 @@ h2 em {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -764,6 +1059,13 @@ h2 em {
     position: relative;
 
     z-index: 2;
+
+    transition:
+        transform var(--transition);
+}
+
+.project-card:hover .project-symbol {
+    transform: scale(1.05);
 }
 
 .code-lines {
@@ -812,7 +1114,6 @@ h2 em {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 }
 
@@ -838,6 +1139,13 @@ h2 em {
     position: relative;
 
     z-index: 2;
+
+    transition:
+        transform var(--transition);
+}
+
+.project-card:hover .javascript-symbol {
+    transform: scale(1.05);
 }
 
 .javascript-circle {
@@ -972,59 +1280,6 @@ h2 em {
 
 
 /* =========================================
-   CURRENTLY BUILDING
-========================================= */
-
-.current-project {
-    margin-top: 25px;
-
-    padding: 17px 19px;
-
-    background: var(--surface);
-
-    border-left: 2px solid var(--accent);
-
-    display: grid;
-
-    grid-template-columns: auto 1fr;
-
-    column-gap: 15px;
-
-    row-gap: 3px;
-
-    max-width: 520px;
-}
-
-.current-project span {
-    grid-column: 1 / -1;
-
-    font-size: 8px;
-
-    letter-spacing: 0.15em;
-
-    color: var(--accent-dark);
-
-    margin-bottom: 2px;
-}
-
-.current-project strong {
-    font-family: var(--serif);
-
-    font-size: 17px;
-
-    font-weight: 500;
-}
-
-.current-project small {
-    align-self: center;
-
-    color: var(--text-light);
-
-    font-size: 10px;
-}
-
-
-/* =========================================
    PROJECT FOOTER
 ========================================= */
 
@@ -1060,6 +1315,19 @@ h2 em {
     color: var(--text-light);
 }
 
+
+/* =========================================
+   PROJECT LINKS
+========================================= */
+
+.project-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
 .project-footer a {
     font-size: 11px;
 
@@ -1074,6 +1342,20 @@ h2 em {
     color: var(--accent-dark);
 
     transform: translateX(3px);
+}
+
+.project-status {
+    font-size: 10px;
+
+    color: var(--accent-dark);
+
+    letter-spacing: 0.12em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+
+    padding: 5px 0;
 }
 
 
@@ -1538,7 +1820,6 @@ h2 em {
         position: absolute;
 
         top: 70px;
-
         left: 0;
 
         width: 100%;
@@ -1664,7 +1945,7 @@ h2 em {
     }
 
     .project-image {
-        min-height: 280px;
+        min-height: 300px;
     }
 
     .project-content {
@@ -1687,8 +1968,33 @@ h2 em {
         padding-top: 30px;
     }
 
+    .project-links {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
     .project-footer a {
         margin-top: 4px;
+    }
+
+
+    /* PROJECT VISUALS */
+
+    .pixel-art {
+        grid-template-columns:
+            repeat(4, 40px);
+
+        grid-template-rows:
+            repeat(4, 40px);
+    }
+
+    .tank-visual {
+        transform: scale(0.85);
+    }
+
+    .autumn-visual {
+        transform: scale(0.85);
     }
 
 
@@ -1802,6 +2108,32 @@ h2 em {
         height: 105px;
 
         font-size: 42px;
+    }
+
+    .pixel-art {
+        grid-template-columns:
+            repeat(4, 28px);
+
+        grid-template-rows:
+            repeat(4, 28px);
+
+        gap: 4px;
+    }
+
+    .tank-visual {
+        transform: scale(0.7);
+    }
+
+    .autumn-visual {
+        transform: scale(0.7);
+    }
+
+    .project-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
     }
 
     .current-project {
